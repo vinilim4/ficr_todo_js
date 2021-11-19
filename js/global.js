@@ -42,6 +42,10 @@ function renderList(){
     listas.map(lista => {
         //criando um titulo pro card
         let h2Tag = document.createElement('H2')
+        //cria btn
+        let btnAddItem = document.createElement('BUTTON')
+        //adiciona o texto ao btn
+        btnAddItem.innerHTML = "novo item"
         //add o titulo da lista salva no titulo no card
         h2Tag.innerHTML = lista.titulo
         //cria uma div para ser o card da lista
@@ -51,6 +55,10 @@ function renderList(){
         //add o h2 a div
         divTag.appendChild(h2Tag)
          //add a div.card-lista a div que contem todas as listas na tela
+        divListas.appendChild(divTag)
+        //add o btnAddItem a div
+        divTag.appendChild(btnAddItem)
+        //add a div.card-lista a div que contem todas as listas da tela
         divListas.appendChild(divTag)
     })
 }
